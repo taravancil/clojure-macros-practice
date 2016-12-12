@@ -45,3 +45,10 @@
   "An even simpler yet implementation of and"
   [x y]
   (if x y nil))
+
+(defn print-seq
+  "Print a sequence. Demonstrating using seq for punning. From Joy of Clojure"
+  [s]
+  (when (seq s)
+    (prn (first s))
+    (recur (rest s))))
