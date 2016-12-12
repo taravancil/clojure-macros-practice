@@ -52,3 +52,10 @@
   (when (seq s)
     (prn (first s))
     (recur (rest s))))
+
+(defn xors
+  "From the Joy of Clojure"
+  [max-x may-y]
+  (for [x (range max-x) y (range max-y)]
+    [x y bit-xor x y]))
+
