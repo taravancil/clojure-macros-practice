@@ -29,9 +29,19 @@
   "An even simpler yet argcount"
   [& rest] (count rest))
 
-(defn my-and
+(defn my-and_
   "My implementation of and"
   [x y]
   (cond
     (nil? x) nil
     :else y))
+
+(defn my-and_1
+  "A simpler implementation of and"
+  [x y]
+  (if (nil? x) nil y))
+
+(defn my-and_2
+  "An even simpler yet implementation of and"
+  [x y]
+  (if x y nil))
